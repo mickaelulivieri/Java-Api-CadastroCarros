@@ -11,19 +11,19 @@ public class CarModel {
     Long id;
 
     @Column(name = "modelo")
-    String modelo;
+    private String modelo;
 
     @Column(name = "marca")
-    String marca;
+    private String marca;
 
     @Column(name = "chassi")
-    String chassi;
+    private String chassi;
 
     @Column(name = "placa")
-    String placa;
+    private String placa;
 
     @Column(name = "preco")
-    Double preco;
+    private Double preco;
 
     public CarModel(Long id, String placa, Double preco, String chassi, String marca, String modelo) {
         this.id = id;
