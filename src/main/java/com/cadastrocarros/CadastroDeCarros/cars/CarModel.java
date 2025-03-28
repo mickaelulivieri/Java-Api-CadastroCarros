@@ -2,7 +2,15 @@ package com.cadastrocarros.CadastroDeCarros.cars;
 
 import com.cadastrocarros.CadastroDeCarros.clients.ClienteModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_Carros")
 public class CarModel {
@@ -29,65 +37,5 @@ public class CarModel {
     @ManyToOne
     @JoinColumn(name = "fk_clienteid")
     private ClienteModel cliente;
-
-    public CarModel(Long id, String placa, Double preco, String chassi, String marca, String modelo) {
-        this.id = id;
-        this.placa = placa;
-        this.preco = preco;
-        this.chassi = chassi;
-        this.marca = marca;
-        this.modelo = modelo;
-    }
-
-    public CarModel() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
-    public Double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(Double preco) {
-        this.preco = preco;
-    }
-
-    public String getChassi() {
-        return chassi;
-    }
-
-    public void setChassi(String chassi) {
-        this.chassi = chassi;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
 
 }

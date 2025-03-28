@@ -3,9 +3,16 @@ package com.cadastrocarros.CadastroDeCarros.clients;
 
 import com.cadastrocarros.CadastroDeCarros.cars.CarModel;
 import jakarta.persistence.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import java.util.List;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = ("tb_clientes"))
 public class ClienteModel {
