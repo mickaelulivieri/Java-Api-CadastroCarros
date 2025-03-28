@@ -1,5 +1,6 @@
-package com.cadastrocarros.CadastroDeCarros.entity;
+package com.cadastrocarros.CadastroDeCarros.cars;
 
+import com.cadastrocarros.CadastroDeCarros.clients.ClienteModel;
 import jakarta.persistence.*;
 
 @Entity
@@ -24,6 +25,10 @@ public class CarModel {
 
     @Column(name = "preco")
     private Double preco;
+
+    @ManyToOne
+    @JoinColumn(name = "fk_clienteid")
+    private ClienteModel cliente;
 
     public CarModel(Long id, String placa, Double preco, String chassi, String marca, String modelo) {
         this.id = id;
