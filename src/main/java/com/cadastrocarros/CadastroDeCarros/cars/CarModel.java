@@ -25,11 +25,14 @@ public class CarModel {
     @Column(name = "marca")
     private String marca;
 
-    @Column(name = "chassi")
+    @Column(name = "chassi", unique = true)
     private String chassi;
 
-    @Column(name = "placa")
+    @Column(name = "placa", unique = true)
     private String placa;
+
+    @Column(name = "imagUrl")
+    private String imagem;
 
     @Column(name = "preco")
     private Double preco;

@@ -27,6 +27,9 @@ public class ClienteModel {
     @Column(name = "idade")
     private int idade;
 
+    @Column(name = "cpf", unique = true)
+    private String cpf;
+
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CarModel> carList;
 
